@@ -100,7 +100,7 @@ function spawnGoldenCookie() {
     const cookie = document.createElement('div');
     cookie.className = 'golden-cookie';
     cookie.innerHTML = '🍪';
-    cookie.style.filter = 'brightness(200%) hue-rotate(45deg)';
+    cookie.style.filter = 'brightness(200%) hue-rotate(10deg)';
     cookie.style.left = `${Math.random() * 80}vw`;
     cookie.style.top = `${Math.random() * 80}vh`;
     
