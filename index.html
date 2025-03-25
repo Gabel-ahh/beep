@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="score-section">
+        <h1>Cookie Clicker</h1>
+        <p>Cookies: <span id="score">0</span></p>
+        <p>Cookies per second: <span id="cps">0</span></p>
+        <p>Golden Cookie Chance: <span id="goldenChance">0</span>%</p>
+    </div>
+
+    <div id="achievements" class="achievements"></div>
+    
+    <div class="clicker-section">
+        <div id="clickEffects"></div>
+        <button id="clickerButton">🍪</button>
+    </div>
+
+    <div class="upgrades-section">
+        <h2>Upgrades</h2>
+        <div class="upgrade-buttons">
+            <button id="autoClickerUpgrade">
+                Buy Auto Clicker (Cost: <span id="autoClickerCost">10</span>)
+            </button>
+            <button id="multiplierUpgrade">
+                Buy Multiplier (Cost: <span id="multiplierCost">50</span>)
+            </button>
+            <button id="megaClickerUpgrade">
+                Buy Mega Clicker (Cost: <span id="megaClickerCost">200</span>)
+            </button>
+            <button id="goldenChanceUpgrade">
+                Increase Golden Cookie Chance (Cost: <span id="goldenChanceCost">150</span>)
+            </button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

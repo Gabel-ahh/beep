@@ -1,0 +1,152 @@
+/* Basic reset and body styling */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Main game container */
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Cookie clicker button styling */
+#clickerButton {
+    font-size: 150px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+}
+
+#clickerButton:hover {
+    transform: scale(1.1);
+}
+
+#clickerButton:active {
+    transform: scale(0.95);
+}
+
+/* Upgrades section styling */
+.upgrades-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.upgrades-section h2 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.upgrade-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.upgrades-section button {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 15px;
+    background: rgba(76, 175, 80, 0.3);
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upgrades-section button:hover {
+    background: rgba(76, 175, 80, 0.5);
+    transform: translateY(-2px);
+}
+
+.upgrades-section button:disabled {
+    background: rgba(128, 128, 128, 0.3);
+    border-color: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.score-section {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.score-section h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.clicker-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.achievements {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+}
+
+.achievement {
+    background: rgba(255, 215, 0, 0.2);
+    border: 2px solid #ffd700;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease;
+}
+
+.click-effect {
+    position: absolute;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    font-size: 20px;
+}
+
+.golden-cookie {
+    position: fixed;
+    cursor: pointer;
+    font-size: 40px;
+    filter: drop-shadow(0 0 10px gold);
+    animation: bounce 1s infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
